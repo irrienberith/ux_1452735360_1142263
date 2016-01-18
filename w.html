@@ -1,0 +1,51 @@
+<h3>OEM接口说明</h3>
+
+<p><strong>OEM接口类</strong>
+<em>IFOEMUtils</em></p>
+
+<p><strong>1.服务器列表</strong></p>
+
+<ul><li><p>显示服务器列表
+&gt; void showServerOptions()</p></li><li><p>添加服务器信息</p><blockquote><p>void addServerWithName(final Context context, final String serverName, final String serverUrl, final boolean userEditable)</p></blockquote><p><em>参数列表:android上下文,服务器名,服务器地址,是否可被用户编辑</em>
+<strong>新添加的服务器名与已有服务器重名，或服务器地址不是合法的711以上服务器地址，都会导致添加失败。下同。</strong></p></li><li><p>添加服务器信息和用户信息</p><ul><li>添加的同时指定服务器是否可被用户编辑
+&gt; void addServerWithName(Context context, String serverName, String serverUrl, String userName, String password, boolean userEditable)</li></ul><p><em>参数列表:android上下文,服务器名,服务器地址,用户名，密码，是否可被用户编辑</em></p><ul><li>添加的同时默认服务器可被用户编辑
+&gt; void addServerWithName(Context context, String serverName, String serverUrl, String userName, String password)</li></ul><p><em>参数列表:android上下文,服务器名,服务器地址,用户名，密码</em></p></li><li><p>删除服务器</p><ul><li>删除指定名称和地址的服务器
+&gt; void removeServer(Context context, String serverName, String serverUrl)</li></ul><p><em>参数列表:android上下文,服务器名,服务器地址</em></p><ul><li>删除指定名称的服务器
+&gt; void removeServer(Context context, String serverName)</li></ul><p><em>参数列表：android上下文,服务器名</em></p><ul><li>删除DEMO服务器
+&gt; void removeDemoServer(Context context)</li></ul><p><em>参数列表:android上下文</em></p></li></ul>
+
+<p><strong>2.关于界面</strong></p>
+
+<ul><li>设置关于界面图标
+&gt; void setAppIcon(String appIcon)</li></ul>
+
+<p><em>参数:图片文件名。例如想把/drawable/xxx.png作为图标，则参数为:xxx </em></p>
+
+<ul><li>设置关于界面app名称*
+&gt; void setAppName(String appName)</li></ul>
+
+<p><em>参数:app名称</em></p>
+
+<ul><li>设置版本号
+&gt; void setAppVersion(String version)</li></ul>
+
+<p><em>参数:版本号</em></p>
+
+<ul><li>设置版本日期
+&gt; void setAppDate(String date)</li></ul>
+
+<p><em>参数:版本日期</em></p>
+
+<ul><li>设置版权信息
+&gt; void setCopyrightInfo(String info)</li></ul>
+
+<p><em>参数:版权信息</em></p>
+
+<ul><li>移除FR关于界面
+&gt; void removeAbout()</li></ul>
+
+<p><strong>3.自动更新</strong></p>
+
+<ul><li><p>关闭FR自动更新
+&gt; void disableUpdate()</p></li><li><p>打开FR自动更新
+&gt; void enableUpdate()</p></li></ul>
